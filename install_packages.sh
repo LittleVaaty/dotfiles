@@ -6,7 +6,6 @@ apt install vim
 apt install tmux
 apt install terminal
 apt install python-pip
-apt install taskwarrior
 apt install tree
 apt install htop
 apt install figlet
@@ -14,6 +13,8 @@ apt install zsh
 apt install curl 
 apt install cmus
 apt install rubygems
+apt install fd-find
+apt install shellcheck
 
 pip install terminal_velocity
 
