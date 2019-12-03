@@ -13,3 +13,6 @@ nnoremap <C-H> <C-W><C-H>
 
 "hlight
 set hlsearch
+
+"set indentation
+set autoindent
