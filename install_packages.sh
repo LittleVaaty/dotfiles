@@ -4,10 +4,6 @@ echo -e "\nINSTALLING SOFTWARE\n"
 
 PKGS=(
 
-    # SYSTEM --------------------------------------------------------------
-
-    'linux-lts'             # Long term support kernel
-
     # TERMINAL UTILITIES --------------------------------------------------
 
     'bash-completion'       # Tab completion for Bash
