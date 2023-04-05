@@ -1,17 +1,15 @@
 #!/bin/bash
 
-if [ ! -d "/$HOME/.config/nvim" ]
-then
-  echo '  [+] Create nvim config directory'
-  mkdir -p ~/.config/nvim
-fi
+configFolder=("nvim" "i3" "tmux" "zsh")
+for configFolder in "${configFolder[@]}"; do
+  if [ ! -d "/$HOME/.config/${configFolder}" ]
+  then
+    echo "  [+] Create ${configFolder} config directory"
+    mkdir -p "${HOME}/.config/${configFolder}"
+  fi
+done
 
-
-
-dotfiles=(".vimrc" ".tmux.conf")
-
-dir="${HOME}/dotfiles"
-
+dotfiles=("nvim/init.vim" "i3/config" "tmux/tmux.conf")
 for dotfile in "${dotfiles[@]}";do
- ln -sf "${dir}/${dotfile}" "${HOME}/${dotfile}"
+ ln -sf "${HOME}/dotfiles/.config/${dotfile}" "${HOME}/.config/${dotfile}"
 done
