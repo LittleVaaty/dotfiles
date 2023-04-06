@@ -1,6 +1,6 @@
 #!/bin/bash
 
-configFolder=("nvim" "i3" "tmux" "zsh")
+configFolder=("nvim" "i3" "tmux")
 for configFolder in "${configFolder[@]}"; do
   if [ ! -d "/$HOME/.config/${configFolder}" ]
   then
@@ -9,22 +9,46 @@ for configFolder in "${configFolder[@]}"; do
   fi
 done
 
-dotfiles=("nvim/init.vim" "i3/config" "tmux/tmux.conf" "zsh/zshrc")
+dotfiles=("nvim/init.vim" "i3/config" "tmux/tmux.conf")
 for dotfile in "${dotfiles[@]}";do
  ln -sf "${HOME}/dotfiles/.config/${dotfile}" "${HOME}/.config/${dotfile}"
 done
 
 # Zsh installation
+ln -sf "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 
-ln -sf "$HOME/dorfile/.zshenv" "$HOME/.zshenv"
-
-if [! -d "/$HOME/.local/share/oh-my-zsh"]
+if [ ! -d "/$HOME/.local/share/oh-my-zsh" ]
 then
     echo "  [+] Create oh-my-zsh data directory"
     mkdir -p "/$HOME/.local/share/oh-my-zsh"
 fi
 
-echo "Install ho-my-zsh"
-ZSH="$HOME/.local/share/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -f "/$HOME/.local/share/oh-my-zsh/oh-my-zsh.sh" ]
+then
+    echo "  [+] Install oh-my-zsh"
+    ZSH="$HOME/.local/share/oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+if [ ! -d "/$HOME/repositories" ]
+then
+    echo "  [+] Create repositories directory"
+    mkdir -p "/$HOME/repositories"
+fi
+
+if [ ! -d "/$HOME/repositories/dracula" ]
+then
+  echo "  [+] Install dracula theme for zsh"
+  git clone https://github.com/dracula/zsh.git ~/repositories/dracula
+  ln -s ~/repositories/dracula/dracula.zsh-theme ~/.local/share/oh-my-zsh/themes/dracula.zsh-theme
+fi
+
+if [ ! -f "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim ]
+then
+    echo "  [+] Install vim plug"
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+fi
+
+echo "Done !"
 
 
