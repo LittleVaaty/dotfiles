@@ -35,11 +35,11 @@ then
     mkdir -p "/$HOME/repositories"
 fi
 
-if [ ! -d "/$HOME/repositories/dracula" ]
+if [ ! -d "/$HOME/repositories/dracula-zsh" ]
 then
   echo "  [+] Install dracula theme for zsh"
-  git clone https://github.com/dracula/zsh.git ~/repositories/dracula
-  ln -s ~/repositories/dracula/dracula.zsh-theme ~/.local/share/oh-my-zsh/themes/dracula.zsh-theme
+  git clone https://github.com/dracula/zsh.git ~/repositories/dracula-zsh
+  ln -s ~/repositories/dracula-zsh/dracula.zsh-theme ~/.local/share/oh-my-zsh/themes/dracula.zsh-theme
 fi
 
 if [ ! -f "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim ]
