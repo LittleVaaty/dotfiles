@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Appearance
     Plug 'vim-airline/vim-airline'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'morhetz/gruvbox'
+    Plug 'Mofiqul/dracula.nvim'
 
     " Utilities
     Plug 'sheerun/vim-polyglot'
@@ -22,8 +22,7 @@ call plug#end()
 let mapleader = " "
 
 " Color scheme and themes
-let t_Co = 256
-colorscheme gruvbox
+colorscheme dracula
 
 " Airline
 let g:airline_theme = 'sobrio'
