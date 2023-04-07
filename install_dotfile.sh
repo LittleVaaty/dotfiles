@@ -1,6 +1,6 @@
 #!/bin/bash
 
-configFolder=("nvim" "i3" "tmux")
+configFolder=("nvim" "i3" "tmux" "i3status")
 for configFolder in "${configFolder[@]}"; do
   if [ ! -d "/$HOME/.config/${configFolder}" ]
   then
@@ -9,7 +9,7 @@ for configFolder in "${configFolder[@]}"; do
   fi
 done
 
-dotfiles=("nvim/init.vim" "i3/config" "tmux/tmux.conf")
+dotfiles=("nvim/init.vim" "i3/config" "tmux/tmux.conf" "i3status/config")
 for dotfile in "${dotfiles[@]}";do
  ln -sf "${HOME}/dotfiles/.config/${dotfile}" "${HOME}/.config/${dotfile}"
 done
