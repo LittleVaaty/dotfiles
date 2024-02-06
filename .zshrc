@@ -1,11 +1,8 @@
-export ZSH="$HOME/.local/share/oh-my-zsh"
-ZSH_THEME="robbyrussell"
+# Use powerline
+USE_POWERLINE="true"
+# Has weird character width
+# Example:
+#    is not a diamond
+HAS_WIDECHARS="false"
 
-plugins=(git tmux)
-
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
+command -v starship &>/dev/null && eval "$(starship init zsh)"
