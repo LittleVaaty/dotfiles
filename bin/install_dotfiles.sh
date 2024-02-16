@@ -17,12 +17,6 @@ done
 # Zsh installation
 ln -sf "$HOME/dotfiles/.zshrc" "$HOME/.zshrc"
 
-if [ ! -d "/$HOME/.local/share/oh-my-zsh" ]
-then
-    echo "  [+] Create oh-my-zsh data directory"
-    mkdir -p "/$HOME/.local/share/oh-my-zsh"
-fi
-
 if [ ! -f "/$HOME/.local/share/oh-my-zsh/oh-my-zsh.sh" ]
 then
     echo "  [+] Install oh-my-zsh"
