@@ -54,7 +54,7 @@ set wildmenu
 nnoremap <C-q> :q!<CR>
 nnoremap <F4> :bd<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>t :botright 20sp term://powershell<CR>i
+nnoremap <leader>t :botright 20sp term://zsh<CR>i
 nnoremap <F10> :CocCommand tsserver.organizeImports<CR>
 nnoremap gb <C-o>
 nnoremap <C-h> <C-w>h

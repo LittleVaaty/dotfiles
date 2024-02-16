@@ -8,4 +8,5 @@ ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+path+=('/opt/exercism')
+export PATH
