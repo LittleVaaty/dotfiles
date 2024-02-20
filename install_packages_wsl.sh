@@ -8,7 +8,7 @@ PKGS=(
 
     'neovim'                # Terminal Editor
     'zsh'                   # ZSH shell
-    'zsh-completions'       # Tab completion for ZSH
+    'zsh-autosuggestions'   # Tab completion for ZSH
     'tmux'                  # Terminal multiplexer
 
     # DISK UTILITIES ------------------------------------------------------
