@@ -19,7 +19,8 @@ sudo apt install -y \
   tmux \
   git \
   cmake \
-  gcc
+  gcc \
+  ranger
 
 cd $HOME
 
