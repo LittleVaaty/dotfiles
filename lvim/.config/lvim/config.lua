@@ -5,11 +5,11 @@
 lvim.format_on_save = true
 
 lvim.plugins = {
-  { "ellisonleao/gruvbox.nvim",       priority = 1000, config = true },
-  { "christoomey/vim-tmux-navigator", lazy = false }
+  { "christoomey/vim-tmux-navigator", lazy = false },
+  { "Mofiqul/dracula.nvim" },
 }
 
-lvim.colorscheme = "gruvbox"
+lvim.colorscheme = "dracula"
 
 lvim.keys.normal_mode["<C-h>"] = "<cmd> TmuxNavigateLeft<CR>"
 lvim.keys.normal_mode["<C-j>"] = "<cmd> TmuxNavigateDown<CR>"
