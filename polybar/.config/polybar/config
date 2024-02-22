@@ -4,19 +4,17 @@
 monitor = 
 include-file = ~/.config/polybar/fullbar
 
-; Material theme color
-;background = #bb212121
-;foreground = #c4c7d1
+background = #282a36
+background-alt = #44475a
+foreground = #f8f8f2
+primary = #bd93f9
+secondary = #ffb86c
+alert = #ff5555
+disabled = #6272a4
 
-; Gruvbox material theme
-background = #bb32302f
-foreground = #dfbf83
 modules-left = i3
 modules-center = date 
 modules-right = memory cpu volume eth notifications 
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 [module/memory]
