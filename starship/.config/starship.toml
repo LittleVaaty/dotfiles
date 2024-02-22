@@ -5,8 +5,8 @@ disabled = true
 
 [username]
 style_root = "red bold"
-format = "🦊 [$user](bold green) "
 disabled = false
+format = "🦇 [$user](bold green) "
 show_always = true
 
 [hostname]
