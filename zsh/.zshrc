@@ -1,3 +1,4 @@
+HISTFILE=~/.zsh_history
 # Use powerline
 USE_POWERLINE="true"
 # Has weird character width
@@ -5,6 +6,10 @@ USE_POWERLINE="true"
 #    is not a diamond
 HAS_WIDECHARS="false"
 
+
 if [ "$TMUX" = "" ]; then tmux; fi
 
 command -v starship &>/dev/null && eval "$(starship init zsh)"
+
+plugins=(zsh-autosuggestions)
+
