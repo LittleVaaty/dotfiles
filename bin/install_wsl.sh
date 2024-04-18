@@ -41,6 +41,13 @@ then
   sudo install lazygit /usr/local/bin
 fi
 
+if ! is_bin_in_path fish;
+then
+  sudo apt-add-repository ppa:fish-shell/release-3
+  sudo apt update
+  sudo apt install fish
+fi
+
 if [ ! -d "/$HOME/.config/tmux/plugins/tpm" ]
 then
   echo "install tmux pluggins manager"
