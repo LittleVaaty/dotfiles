@@ -17,12 +17,28 @@ sudo apt install -y \
   cmake \
   gcc \
   ranger \
-  stow
+  stow \
+  ripgrep \
+  fd-find \
+  fzf
 
 if ! is_bin_in_path nvm;
 then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
   nvm install 20
+fi
+
+if ! is_bin_in_path startship;
+then
+  curl -sS https://starship.rs/install.sh | sh
+fi
+
+if ! is_bin_in_path lazygit;
+then
+  LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+  curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+  tar xf lazygit.tar.gz lazygit
+  sudo install lazygit /usr/local/bin
 fi
 
 if [ ! -d "/$HOME/.config/tmux/plugins/tpm" ]
