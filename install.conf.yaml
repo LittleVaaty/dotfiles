@@ -1,0 +1,34 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.config/starship.toml: 
+      path: starship.toml
+      create: true
+    ~/.config/tmux/tmux.conf: 
+      path: ./tmux/tmux.conf
+      create: true
+    ~/.config/nvim/init.lua: 
+      path: ./nvim/init.lua
+      create: true
+    ~/.config/nvim/lua: 
+      path: ./nvim/lua
+      create: true
+
+- shell:
+  - 
+    command: "curl -fsSL https://starship.rs/install.sh | sh"
+    stdin: true
+    stdout: true
+    stderr: true
+
+  -
+    command: "curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh"
+    stdin: true
+    stdout: true
+    stderr: true
+
+  - [cargo install lsd bat ripgrep]
