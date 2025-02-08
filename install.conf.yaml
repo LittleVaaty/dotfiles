@@ -11,24 +11,19 @@
     ~/.config/tmux/tmux.conf: 
       path: ./tmux/tmux.conf
       create: true
+    ~/.config/tmux/plugins:
+      path: ./tmux/plugins/
+      create: true
     ~/.config/nvim/init.lua: 
       path: ./nvim/init.lua
       create: true
     ~/.config/nvim/lua: 
       path: ./nvim/lua
       create: true
+    ~/.config/yazi/theme.toml: 
+      path: ./yazi/theme.toml
+      create: true
+    ~/.zshrc:
+      path: ./zsh/zshrc
+      create: true
 
-- shell:
-  - 
-    command: "curl -fsSL https://starship.rs/install.sh | sh"
-    stdin: true
-    stdout: true
-    stderr: true
-
-  -
-    command: "curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh"
-    stdin: true
-    stdout: true
-    stderr: true
-
-  - [cargo install lsd bat ripgrep]
