@@ -12,11 +12,21 @@ alias l="ls"
 alias mkdir="mkdir -p"
 
 alias v="nvim"
+alias vdev="NVIM_APPNAME=nvim-dev nvim"
 
 alias ls="lsd"
 alias cat="bat"
+
+alias jazz="sh ~/.local/bin/jazz.sh"
+alias on="sh ~/.local/bin/on.sh"
+
+# Obsidian
+alias oo='cd $HOME/repo/notes/'
+alias or='v $HOME/repo/notes/inbox/*.md'
 
 export EDITOR=nvim
 
 eval "$(atuin init zsh)"
 eval "$(starship init zsh)"
+
+. "$HOME/.atuin/bin/env"

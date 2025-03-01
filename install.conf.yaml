@@ -26,4 +26,9 @@
     ~/.zshrc:
       path: ./zsh/zshrc
       create: true
-
+    ~/.local/bin/jazz.sh:
+      path: ./bin/jazz.sh
+      create: true
+    ~/.local/bin/on.sh:
+      path: ./bin/on.sh
+      create: true 
