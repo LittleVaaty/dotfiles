@@ -5,26 +5,11 @@
 - clean: ['~']
 
 - link:
-    ~/.config/starship.toml: 
-      path: starship.toml
+    ~/.config/waybar: 
+      path: ./waybar
       create: true
-    ~/.config/tmux/tmux.conf: 
-      path: ./tmux/tmux.conf
-      create: true
-    ~/.config/tmux/plugins:
-      path: ./tmux/plugins/
-      create: true
-    ~/.config/nvim/init.lua: 
-      path: ./nvim/init.lua
-      create: true
-    ~/.config/nvim/lua: 
-      path: ./nvim/lua
-      create: true
-    ~/.config/yazi/theme.toml: 
-      path: ./yazi/theme.toml
-      create: true
-    ~/.zshrc:
-      path: ./zsh/zshrc
+    ~/.config/nvim: 
+      path: ./nvim
       create: true
     ~/.local/bin/jazz.sh:
       path: ./bin/jazz.sh
