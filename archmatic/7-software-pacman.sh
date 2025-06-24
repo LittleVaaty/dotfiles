@@ -11,10 +11,14 @@ echo
 echo "INSTALLING SOFTWARE"
 echo
 
+cd /tmp/
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+cd ~
+rm /tmp/yay
+
 PKGS=(
   # TERMINAL UTILITIES --------------------------------------------------
-  'lsd' # Better ls
-  'fish'
+  'lsd'      # Better ls
   'starship' # Prompt
   'atuin'
   'bottom' # System monitoring
@@ -25,59 +29,54 @@ PKGS=(
   'bat'      # Better cat
   'tmux'     # terminal multiplexer
   'yazi'     # Terminal file manager
-  'dust'     # Disk usage tool
-  'curl'     # Remote content retrieval
-  'feh'      # Terminal-based image viewer/manipulator
-  'gufw'     # Firewall manager
-  'ntp'      # Network Time Protocol to set time via network.
-  'rsync'    # Remote file sync utility
-  'unrar'    # RAR compression program
-  'unzip'    # Zip compression program
-  'wget'     # Remote content retrieval
-  'zip'      # Zip compression program
-  'zsh'      # ZSH shell
+  'ripgrep'
+  'dust'  # Disk usage tool
+  'curl'  # Remote content retrieval
+  'feh'   # Terminal-based image viewer/manipulator
+  'gufw'  # Firewall manager
+  'ntp'   # Network Time Protocol to set time via network.
+  'rsync' # Remote file sync utility
+  'unrar' # RAR compression program
+  'unzip' # Zip compression program
+  'wget'  # Remote content retrieval
+  'zip'   # Zip compression program
+  'zsh'   # ZSH shell
+  'zsh-syntax-highlighting'
+  'zsh-autosuggestions'
 
   # DISK UTILITIES ------------------------------------------------------
-
-  'autofs'  # Auto-mounter
-  'gparted' # Disk utility
+  'autofs' # Auto-mounter
 
   # GENERAL UTILITIES ---------------------------------------------------
-
-  'ghostty'
   'ttf-inconsolata-nerd'
+  'ttf-dejavu'
+  'ttf-roboto'
+  'ttf-jetbrains-mono-nerd'
+  'ttf-font-awesome'
 
   # DEVELOPMENT ---------------------------------------------------------
-
   'clang'  # C Lang compiler
   'cmake'  # Cross-platform open-source make system
   'git'    # Version control system
   'gcc'    # C/C++ compiler
-  'meld'   # File/directory comparison
   'nodejs' # Javascript runtime environment
   'npm'    # Node package manager
   'python' # Scripting language
   'python-pipx'
-  'yarn' # Dependency management (Hyper needs this)
-  'git'
-  'github-cli' # Cli client for github
-  'neovim'     # Text editor
-  'arduino-ide'
-  'arduino-avr-core'
+  'yarn'   # Dependency management (Hyper needs this)
+  'neovim' # Text editor
+  'lazygit'
+  'tree-sitter-cli'
 
   # WEB TOOLS -----------------------------------------------------------
-
-  'firefox' # Web browser
 
   # COMMUNICATIONS ------------------------------------------------------
 
   # MEDIA ---------------------------------------------------------------
-
   'nscpot' # Terminal client for spotify
+  'cmus'
 
   # GRAPHICS AND DESIGN -------------------------------------------------
-
-  'gimp' # GNU Image Manipulation Program
 
   # PRODUCTIVITY --------------------------------------------------------
 

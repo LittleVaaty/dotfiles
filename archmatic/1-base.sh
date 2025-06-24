@@ -12,18 +12,23 @@ echo "INSTALLING BASE"
 echo
 
 PKGS=(
+  # LINUX ----------------------------------------------------------------
   'linux'
   'linux-headers'
   'linux-lts'
   'linux-lts-headers'
   'linux-firmware'
-  'git'
-  'base-devel'
-  'mesa'
-  'libva-mesa-driver'
   'lvm2'
+  'networkmanager'
+  # TERMINAL UTILITIES ---------------------------------------------------
+  'base-devel'
+  'git'
   'sudo'
   'neovim'
+  # DRIVERS --------------------------------------------------------------
+  'mesa'
+  'libva-mesa-driver'
+  'amd-ucode'
 )
 
 for PKG in "${PKGS[@]}"; do

@@ -12,6 +12,15 @@ echo "INSTALLING HYPRLAND"
 echo
 
 PKGS=(
+  'hyprland'
+  'waybar'
+  'rofi-wayland'
+  'xdg-desktop-portal'
+  'xdg-desktop-portal-gtk'
+  'xdg-user-dirs'
+  'grim'
+  'mate-polkit'
+  'nwg-look'
 )
 
 for PKG in "${PKGS[@]}"; do

@@ -13,6 +13,7 @@ echo
 
 PKGS=(
   'networkmanager'
+  'network-manager-applet'
 )
 
 for PKG in "${PKGS[@]}"; do
