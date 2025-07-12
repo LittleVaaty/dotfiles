@@ -8,6 +8,9 @@
     ~/.config/waybar: 
       path: ./waybar
       create: true
+    ~/.config/hypr: 
+      path: ./hypr
+      create: true
     ~/.config/nvim: 
       path: ./nvim
       create: true
