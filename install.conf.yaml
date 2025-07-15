@@ -6,26 +6,26 @@
 
 - link:
     ~/.config/waybar: 
-      path: ./waybar
+      path: ./dotfiles/waybar
       create: true
     ~/.config/hypr: 
-      path: ./hypr
+      path: ./dotfiles/hypr
       create: true
     ~/.config/nvim: 
-      path: ./nvim
+      path: ./dotfiles/nvim
       create: true
+    ~/.config/starship.toml:
+      path: ./dotfiles/starship.toml
+      create: true 
+    ~/.config/alacritty/alacritty.toml:
+      path: ./dotfiles/alacritty/alacritty.toml
+      create: true 
+    ~/.zshrc:
+      path: ./dotfiles/zsh/zshrc
+      create: true 
     ~/.local/bin/jazz.sh:
       path: ./bin/jazz.sh
       create: true
     ~/.local/bin/on.sh:
       path: ./bin/on.sh
-      create: true 
-    ~/.config/starship.toml:
-      path: ./starship.toml
-      create: true 
-    ~/.config/alacritty/alacritty.toml:
-      path: ./alacritty/alacritty.toml
-      create: true 
-    ~/.zshrc:
-      path: ./zsh/zshrc
-      create: true 
+      create: true
