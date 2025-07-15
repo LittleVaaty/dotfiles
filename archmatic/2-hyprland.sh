@@ -21,11 +21,13 @@ PKGS=(
   'grim'
   'mate-polkit'
   'nwg-look'
+  'lightdm'
+  'lightdm-gtk-greeter'
 )
 
 for PKG in "${PKGS[@]}"; do
   echo "INSTALLING: ${PKG}"
-  sudo pacman -S "$PKG" --noconfirm --needed
+  sudo pacman -S "$PKG" --needed
 done
 
 echo

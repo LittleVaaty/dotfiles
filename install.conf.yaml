@@ -20,3 +20,12 @@
     ~/.local/bin/on.sh:
       path: ./bin/on.sh
       create: true 
+    ~/.config/starship.toml:
+      path: ./starship.toml
+      create: true 
+    ~/.config/alacritty/alacritty.toml:
+      path: ./alacritty/alacritty.toml
+      create: true 
+    ~/.zshrc:
+      path: ./zsh/zshrc
+      create: true 

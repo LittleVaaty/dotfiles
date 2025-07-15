@@ -8,10 +8,24 @@
 #-------------------------------------------------------------------------
 
 echo
-echo "INSTALLING SOFTWARE"
+echo "INSTALLING AUR SOFTWARE"
 echo
 
+echo
+echo "INSTALLING YAY"
+echo
+
+cd /tmp/
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+cd ~
+rm /tmp/yay
+
 PKGS=(
+  # SYSTEM UTILITIES ----------------------------------------------------
+  'gufw' # Firewall manager
+
+  # UTILITIES -----------------------------------------------------------
+
   # DISK UTILITIES ------------------------------------------------------
   'autofs'  # Auto-mounter
   'gparted' # Disk utility
@@ -38,14 +52,16 @@ PKGS=(
   'gimp' # GNU Image Manipulation Program
 
   # PRODUCTIVITY --------------------------------------------------------
+  'libreoffice-fresh'
 
   # VIRTUALIZATION ------------------------------------------------------
+
+  # THEMES --------------------------------------------------------------
 
 )
 
 for PKG in "${PKGS[@]}"; do
-  echo "INSTALLING: ${PKG}"
-  sudo pacman -S "$PKG" --noconfirm --needed
+  yay -S $PKG --needed
 done
 
 echo

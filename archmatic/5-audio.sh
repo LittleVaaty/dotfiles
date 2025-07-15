@@ -18,6 +18,7 @@ PKGS=(
   'pipewire-alsa'
   'pipewire-pulse'
   'pipewire-audio'
+  'pipewire-jack'
   'wireplumber'
   'pavucontrol'
 )
