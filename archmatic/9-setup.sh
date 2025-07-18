@@ -66,7 +66,8 @@ if [ ! -d "/$HOME/.config/tmux/plugins/tpm" ]; then
 fi
 
 # ------------------------------------------------------------------------
-
+git config --global user.email "hansen-jonathan@hotmail.com"
+git config --global user.name LittleVaaty
 # ------------------------------------------------------------------------
 
 # ------------------------------------------------------------------------
